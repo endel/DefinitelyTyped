@@ -175,7 +175,7 @@ declare namespace createjs {
         unregisterLoader(loader: AbstractLoader): void;
     }
 
-    export class ManifestLoader
+    export class ManifestLoader extends AbstractLoader
         {
         constructor(loadItem: LoadItem | Object);
 
@@ -228,40 +228,40 @@ declare namespace createjs {
         static parseURI(path: string): Object;
         }
 
-    export class SoundLoader
+    export class SoundLoader extends AbstractLoader
         {
         constructor(loadItem: Object, preferXHR: boolean);
 
         static canLoadItem(item: Object): boolean;
         }
 
-    export class SpriteSheetLoader
+    export class SpriteSheetLoader extends AbstractLoader
         {
         constructor(loadItem: Object);
 
         static canLoadItem(item: Object): boolean;
         }
 
-    export class SVGLoader
+    export class SVGLoader extends AbstractLoader
         {
         constructor(loadItem: Object, preferXHR: boolean);
 
         static canLoadItem(item: Object): boolean;
         }
 
-    export class TagRequest
+    export class TagRequest extends AbstractLoader
         {
 
         }
 
-    export class TextLoader
+    export class TextLoader extends AbstractLoader
         {
         constructor(loadItem: Object);
 
         static canLoadItem(item: Object): boolean;
         }
 
-    export class VideoLoader
+    export class VideoLoader extends AbstractLoader
         {
         constructor(loadItem: Object, preferXHR: boolean);
 
@@ -277,7 +277,7 @@ declare namespace createjs {
         getResponseHeader(header: string): string;
         }
 
-    export class XMLLoader
+    export class XMLLoader extends AbstractLoader
         {
         constructor(loadItem: Object);
 
